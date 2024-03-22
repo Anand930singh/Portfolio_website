@@ -13,17 +13,25 @@ function Navbar() {
 
     return (
         <div className='navbar'>
-            <div className='leftNav'>Anand Singh</div>
-            <div>
-                <div className={`rightNav ${showNav ? 'responsive' : ''}`}>
-                    <div onClick={toggleNav} className='icon'>
-                        {showNav ? <RxCross2 size={30} /> : <FaBars size={30} />}
+            <div class="nav">
+                <input type="checkbox" id="nav-check" />
+                <div class="nav-header">
+                    <div class="nav-title">
+                        A<span className='singh'>S</span>
                     </div>
-                    <a href="#about"><span>About</span></a>
-                    <a href="#edu"><span>Education</span></a>
-                    <a href="#proj"><span>Projects</span></a>
-                    <a href="#exp"><span>Experience</span></a>
-                    <a href="#skill"><span>Skills</span></a>
+                </div>
+                <div class="nav-btn">
+                    <label for="nav-check">
+                        {!showNav?(<FaBars size={30} onClick={toggleNav}/>):(<RxCross2 size={30} onClick={toggleNav}/>)}
+                    </label>
+                </div>
+
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#edu">Education</a>
+                    <a href="#proj" >Project</a>
+                    <a href="#exp">Experience</a>
+                    <a href="#skill">Skill</a>
                 </div>
             </div>
         </div>
