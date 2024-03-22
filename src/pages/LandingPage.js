@@ -96,7 +96,15 @@ function LandingPage() {
       </div>
       <div id='Projects' ref={projectsRef}><Projects /></div>
       <div id='Skills' ref={skillsRef}><Skills /></div>
+      <div className='socialMediaMobile'>
+        <div className='followMeMobile'>Follow Me</div>
+        <div><a href='https://github.com/Anand930singh'><FaGithub className='xyz' style={{ color: "white" }} size={25} /></a></div>
+        <div><a href='https://www.linkedin.com/in/anand-kumar-singh-b46a3b229/'><FaLinkedin className='xyz' style={{ color: "white" }} size={25} /></a></div>
+        <div><a href='https://twitter.com/AnandKu01361058'><RiTwitterXFill className='xyz' style={{ color: "white" }} size={25} /></a></div>
+        <div><a href='mailto:anand2002ksingh@gmail.com'><BiLogoGmail className='xyz' style={{ color: "white" }} size={25} /></a></div>
+      </div>
     </div>
+    
   );
 }
 
