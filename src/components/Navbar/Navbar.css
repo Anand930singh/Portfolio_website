@@ -7,7 +7,7 @@
     justify-content:space-between;
     /* column-gap: 55%; */
     align-items: center;
-    padding-top: 0.7rem;
+    padding-top: 0.1rem;
     position:fixed;
     width:100vw;
     z-index:10;

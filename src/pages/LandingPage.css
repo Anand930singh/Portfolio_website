@@ -80,12 +80,29 @@
     background-color: transparent;
     top:-5rem;
 }
+.socialMediaMobile{
+    display: none;
+}
 @media screen and (max-width: 600px) {
+    .landingPageContain{
+        row-gap: 3rem;
+    }
     .sideLine{
         display: none;
     }
     .socialMedia{
         display: none;
+    }
+    .socialMediaMobile{
+        display: flex;
+        font-family: "Oxanium", sans-serif;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        color: white;
+        margin: 1rem;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(246, 246, 246, 0.2);
     }
 }
 .githubContainer{
