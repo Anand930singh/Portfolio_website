@@ -12,7 +12,7 @@ function Projects() {
                 <div className='projCount'>01</div>
                 <div className='githubDetail'>
                     <div className='githubButton'>
-                        <a href=''>GitHub</a>
+                        <a href='https://github.com/Anand930singh/CS-301-Project-1'>GitHub</a>
                     </div>
                     <div className='detailProj'>
                     A dynamic blogging website allowing users to create, edit, and delete blogs.
@@ -31,7 +31,7 @@ function Projects() {
                 <div className='projCount'>02</div>
                 <div className='githubDetail'>
                     <div className='githubButton'>
-                        <a href=''>GitHub</a>
+                        <a href='https://github.com/Anand930singh/DBMS_Rental_Service'>GitHub</a>
                     </div>
                     <div className='detailProj'>
                     Home rental service utilizing relational database for efficient data management and retrieval.
@@ -50,7 +50,7 @@ function Projects() {
                 <div className='projCount'>03</div>
                 <div className='githubDetail'>
                     <div className='githubButton'>
-                        <a href=''>GitHub</a>
+                        <a href='https://github.com/Anand930singh/Portfolio_website'>GitHub</a>
                     </div>
                     <div className='detailProj'>
                     Personal portfolio website showcasing my skills, projects, and experiences.
@@ -67,7 +67,7 @@ function Projects() {
                 <div className='projCount'>04</div>
                 <div className='githubDetail'>
                     <div className='githubButton'>
-                        <a href=''>GitHub</a>
+                        <a href='https://github.com/Anand930singh/HackOverflow_attention_mavericks'>GitHub</a>
                     </div>
                     <div className='detailProj'>
                     Government project portal facilitating citizen feedback for informed decision-making and reporting.
@@ -87,7 +87,7 @@ function Projects() {
                 <div className='projCount'>05</div>
                 <div className='githubDetail'>
                     <div className='githubButton'>
-                        <a href=''>GitHub</a>
+                        <a href='https://github.com/Anand930singh/Cricket-Code-Hack'>GitHub</a>
                     </div>
                     <div className='detailProj'>
                     Predicts cricket match runs based on player and ground data.
