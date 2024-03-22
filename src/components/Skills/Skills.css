@@ -1,0 +1,87 @@
+.skillsContainer{
+    position: relative;
+    color:white;
+    width:99.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+    align-items: center;
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+}
+.skillHeading{
+    position: relative;
+    width:60%;
+    display: flex;
+    font-weight: 800;
+    font-size: 2.5em;
+    font-family: "Oxanium", sans-serif;
+}
+.allSkills{
+    position:relative;
+    width:60%;
+    column-count: 2;
+    column-gap: 3.5rem;
+}
+.skillIcons{
+    background-color: transparent;
+}
+@media screen and (max-width: 854px) {
+    .allSkills{
+        column-count: 1;
+    }
+}
+
+.skillCard{
+    position: relative;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    padding:1rem;
+    margin-bottom:1.5rem;
+    break-inside: avoid-column;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: saturate(180%) blur(10px);
+}
+.skillCard:hover{
+    box-shadow: 0 4px 8px rgba(120, 120, 120, 0.2);
+    transform: translateY(-5px);
+}
+@media screen and (max-width: 593px) {
+    .skillHeading{
+        width:90%;
+    }
+    .allSkills{
+        width:90%;
+    }
+    .skillCard{
+        padding-right: 0rem;
+    }
+    .skillsContainer{
+        padding:0rem;
+    }
+}
+.skillHeadDetail{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    background-color: transparent;
+}
+.skillHead{
+    position: relative;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    background-color: transparent;
+}
+.skillDetail{
+    position: relative;
+    font-family: "Oxanium", sans-serif;
+    font-weight:500;
+    font-size: 1.1em;
+    background-color: transparent;
+}
