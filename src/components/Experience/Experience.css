@@ -1,0 +1,122 @@
+.experienceContainer{
+    position: relative;
+    color:white;
+    width:99.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+    align-items: center;
+    padding-top: 5rem;
+
+}
+.expHeading{
+    position: relative;
+    width:60%;
+    display: flex;
+    justify-content:start;
+    font-weight: 800;
+    font-size: 2.5em;
+    font-family: "Oxanium", sans-serif;
+}
+.expCard{
+    position:relative;
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.expHeadingCard{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blueviolet;
+    font-weight: 600;
+    font-size: 1.5em;
+    font-family: "Oxanium", sans-serif;
+    padding:1px 10px 0px 10px;
+    border-radius: 5px;
+}
+.expDetailCard{
+    position:relative;
+    display: flex;
+    background-color: #241d41;
+    flex-direction: row;
+    align-items: center;
+    padding:0.5rem 2rem;
+    border-radius: 5px;
+}
+
+.companyName, .timeDuration, .openCloseIcon{
+    background-color:transparent;
+}
+.expDetailRight{
+    position:relative;
+    width:19rem;
+    background-color: transparent;
+    overflow: hidden;
+    height:14rem;
+}
+@media screen and (max-width: 1000px) {
+    .expDetailCard{
+        flex-direction: column-reverse;
+    }
+    .timeDuration{
+        display: none;
+    }
+    .companyName{
+        font-size: 0.8em;
+    }
+    .expCard{
+        width:87%;
+    }
+    .expDetailRight{
+        width:12rem;
+    }
+    .expHeading{
+        justify-content: flex-start;
+        width:90%;
+    }
+    .experienceContainer{
+        padding-top: 0rem;
+    }
+}
+.expDetailLeft{
+    position: relative;
+    display: flex;
+    background-color: transparent;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 1rem;
+    font-family: "Oxanium", sans-serif;
+}
+.expDetailRight img{
+    background-color: transparent;
+}
+.techStacks{
+    position: relative;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+.expLocation{
+    background-color: transparent;
+    color: rgb(152, 152, 152);
+}
+.expDetail{
+    position: relative;
+    background-color: transparent;
+    font-size: 1.2em;
+}
+
+.techStacks span{
+    position: relative;
+    background-color:blueviolet;
+    border-radius: 10px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding:0px 8px;
+}

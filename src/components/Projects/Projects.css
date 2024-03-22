@@ -1,0 +1,119 @@
+.projectContainer{
+    position: relative;
+    color:white;
+    width:99.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+    align-items: center;
+    padding-top: 5rem;
+}
+.projHeading{
+    position: relative;
+    width:60%;
+    display: flex;
+    font-weight: 800;
+    font-size: 2.5em;
+    font-family: "Oxanium", sans-serif;
+}
+.allProjects{
+    position:relative;
+    width:60%;
+    column-count: 2; 
+    column-gap: 1.5rem;
+}
+.projCard{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.5rem; 
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.projDetail{
+    position: absolute;
+    top: 0rem;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+    display: none;
+    padding-left: 1rem;
+}
+.projCard:hover .projDetail{
+    display:flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.8);
+  backdrop-filter: saturate(180%) blur(10px);
+}
+.projCard:hover .projImg img {
+    transform: scale(1.5);
+    transition: transform 2s ease;
+}
+.projCount{
+    position: relative;
+    background-color: transparent;
+    font-family: "Spicy Rice", serif;
+    font-size: 3rem;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.githubDetail{
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction:column;
+    row-gap: 1rem;
+    padding-bottom: 1rem;
+}
+.githubButton{
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background-color: transparent;
+}
+.githubButton a{
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    background-color:red;
+    color:white;
+    border-radius: 25px;
+    padding:0.3em 0.7em;
+}
+.detailProj{
+    background-color: transparent;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 600;
+}
+.projImg{
+    position:relative;
+    width:100%;
+    object-fit: cover;
+}
+.projImg img{
+    width: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 1000px) {
+    .allProjects {
+        width: 86%; 
+        column-count: 1;
+    }
+    .projCount{
+        display: none;
+    }
+    .githubDetail{
+        margin-top: 2rem;
+    }
+    .projHeading{
+        justify-content: flex-start;
+        width:90%;
+    }
+    .projectContainer{
+        padding-top: 0rem;
+    }
+}

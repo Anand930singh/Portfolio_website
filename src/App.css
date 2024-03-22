@@ -1,0 +1,20 @@
+/* For Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 0.1rem; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the thumb */
+  border-radius: 2px; /* Roundness of the thumb */
+}
+
+/* For Firefox */
+/* Note: Firefox currently doesn't support styling the scrollbar, but you can use this code for future compatibility */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
