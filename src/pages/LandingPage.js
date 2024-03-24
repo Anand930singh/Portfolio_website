@@ -10,6 +10,8 @@ import Education from '../components/Education/Education';
 import Experience from '../components/Experience/Experience';
 import Projects from '../components/Projects/Projects';
 import Skills from '../components/Skills/Skills';
+import { Analytics } from "@vercel/analytics/react"
+
 
 function LandingPage() {
   const [activeSection, setActiveSection] = useState('');
@@ -96,6 +98,7 @@ function LandingPage() {
       </div>
       <div id='Projects' ref={projectsRef}><Projects /></div>
       <div id='Skills' ref={skillsRef}><Skills /></div>
+      <div><Analytics style={{color:'white'}}/></div>
       <div className='socialMediaMobile'>
         <div className='followMeMobile'>Follow Me</div>
         <div><a href='https://github.com/Anand930singh'><FaGithub className='xyz' style={{ color: "white" }} size={25} /></a></div>
