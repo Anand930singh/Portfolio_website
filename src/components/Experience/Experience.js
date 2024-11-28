@@ -40,7 +40,7 @@ function Experience() {
             <div className='expCard'>
                 <div className='expHeadingCard'>
                     <div className='companyName'>Software Developer Intern @ RIDE EVEE</div>
-                    <div className='timeDuration'>June 2024 - Present</div>
+                    <div className='timeDuration'>June 2024 - Sept 2024</div>
                     <div className='openCloseIcon'>{active && ind===1?(<CiCircleMinus onClick={()=>handleExp(null)} size={35} style={{ background: 'transparent' }} />):(<CiCirclePlus onClick={()=>handleExp(1)} size={35} style={{ background: 'transparent' }} />)}
                     </div>
                 </div>
