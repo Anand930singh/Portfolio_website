@@ -15,25 +15,25 @@ function Experience() {
             <div className='expHeading'><div>PROFESSIONAL EXPERIENCE</div></div>
             <div className='expCard'>
                 <div className='expHeadingCard'>
-                    <div className='companyName'>Software Developer Intern @ Code Inbound LLP</div>
-                    <div className='timeDuration'>June 2023 - Dec 2023</div>
+                    <div className='companyName'>Software Developer Intern @ ESTECO Software India Pvt. Ltd.</div>
+                    <div className='timeDuration'>Jan 2025 - Mar 2025</div>
                     <div className='openCloseIcon'>{active && ind===0?(<CiCircleMinus onClick={()=>handleExp(null)} size={35} style={{ background: 'transparent' }} />):(<CiCirclePlus onClick={()=>handleExp(0)} size={35} style={{ background: 'transparent' }} />)}
                     </div>
                 </div>
                 {active&& ind===0&& <div className='expDetailCard'>
                     <div className='expDetailLeft'>
-                        <div className='expLocation'>📍 Remote</div>
+                        <div className='expLocation'>📍 Pune, India</div>
                         <div className='expDetail'>
-                            Creating, fine-tuning, troubleshooting, and validating server-side endpoints for a Network Monitoring System using Nest.JS.</div>
+                            GitInsight is a full-stack web app that analyzes GitHub repositories in real time using GraphQL and REST APIs, with advanced search and interactive visualizations. Built with React.js and Java Spring Boot, it supports efficient, large-scale data processing through multithreading, caching, and token rotation.</div>
                         <div className='techStacks'>
-                            <span>NestJs</span>
+                            <span>Spring Boot</span>
                             <span>PostgresSQL</span>
-                            <span>TypeORM</span>
-                            <span>Swagger</span>
+                            <span>Hibernate</span>
+                            <span>React</span>
                         </div>
                     </div>
                     <div className='expDetailRight'>
-                        <img src='https://www.codeinbound.com/assets/images/main-logo/logo.png' alt='Not available' height="60"/>
+                        <img src='https://www.esteco.com/assets/img/cfvgzy1Kx3-4262.svg' alt='Not available' height="60"/>
                     </div>
                 </div>}
             </div>
@@ -58,6 +58,30 @@ function Experience() {
                     </div>
                     <div className='expDetailRight'>
                         <img src='https://www.f6s.com/content-resource/profiles/3316299_th1.jpg' alt='Not available' />
+                    </div>
+                </div>}
+            </div>
+            <div className='expCard'>
+                <div className='expHeadingCard'>
+                    <div className='companyName'>Software Developer Intern @ Code Inbound LLP</div>
+                    <div className='timeDuration'>June 2023 - Dec 2023</div>
+                    <div className='openCloseIcon'>{active && ind===0?(<CiCircleMinus onClick={()=>handleExp(null)} size={35} style={{ background: 'transparent' }} />):(<CiCirclePlus onClick={()=>handleExp(0)} size={35} style={{ background: 'transparent' }} />)}
+                    </div>
+                </div>
+                {active&& ind===0&& <div className='expDetailCard'>
+                    <div className='expDetailLeft'>
+                        <div className='expLocation'>📍 Remote</div>
+                        <div className='expDetail'>
+                            Creating, fine-tuning, troubleshooting, and validating server-side endpoints for a Network Monitoring System using Nest.JS.</div>
+                        <div className='techStacks'>
+                            <span>NestJs</span>
+                            <span>PostgresSQL</span>
+                            <span>TypeORM</span>
+                            <span>Swagger</span>
+                        </div>
+                    </div>
+                    <div className='expDetailRight'>
+                        <img src='https://www.codeinbound.com/assets/images/main-logo/logo.png' alt='Not available' height="60"/>
                     </div>
                 </div>}
             </div>
