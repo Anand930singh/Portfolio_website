@@ -15,7 +15,7 @@ function Experience() {
             <div className='expHeading'><div>PROFESSIONAL EXPERIENCE</div></div>
             <div className='expCard'>
                 <div className='expHeadingCard'>
-                    <div className='companyName'>Software Developer Intern @ ESTECO Software India Pvt. Ltd.</div>
+                    <div className='companyName'>Software Developer Intern @ ESTECO Software</div>
                     <div className='timeDuration'>Jan 2025 - Mar 2025</div>
                     <div className='openCloseIcon'>{active && ind===0?(<CiCircleMinus onClick={()=>handleExp(null)} size={35} style={{ background: 'transparent' }} />):(<CiCirclePlus onClick={()=>handleExp(0)} size={35} style={{ background: 'transparent' }} />)}
                     </div>
