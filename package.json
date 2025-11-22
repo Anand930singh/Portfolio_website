@@ -42,5 +42,9 @@
   "overrides": {
     "nth-check": "^2.1.1",
     "postcss": "^8.4.31"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
   }
 }
