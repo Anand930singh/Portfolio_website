@@ -1,0 +1,132 @@
+.leetcodeContainer {
+    position: relative;
+    color: white;
+    width: 99.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.leetcodeHeading {
+    position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 800;
+    font-size: 2.5em;
+    font-family: "Oxanium", sans-serif;
+}
+
+.leetcodeStatsGrid {
+    position: relative;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.leetcodeStatCard {
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.leetcodeStatCard:hover {
+    transform: translateY(-5px);
+}
+
+.leetcodeStatIcon {
+    background-color: transparent;
+}
+
+.leetcodeStatContent {
+    text-align: center;
+    background-color: transparent;
+}
+
+.leetcodeStatNumber {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: "Oxanium", sans-serif;
+    background: linear-gradient(90deg, #68f20c, rgb(255, 120, 36));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: transparent;
+}
+
+.leetcodeStatLabel {
+    font-size: 1.2rem;
+    font-family: "Oxanium", sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.5rem;
+    background-color: transparent;
+}
+
+.leetcodeCardContainer {
+    position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.leetcodeCard {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.leetcodeCard:hover {
+    transform: scale(1.02);
+}
+
+.leetcodeCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+@media screen and (max-width: 1000px) {
+    .leetcodeCardContainer {
+        width: 86%;
+    }
+    
+    .leetcodeHeading {
+        width: 86%;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .leetcodeCardContainer {
+        width: 90%;
+    }
+    
+    .leetcodeHeading {
+        width: 90%;
+        font-size: 2em;
+    }
+    
+    .leetcodeCard {
+        padding: 0.8rem;
+    }
+}
+

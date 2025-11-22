@@ -1,0 +1,428 @@
+.timelineContainer {
+    position: relative;
+    color: white;
+    width: 99.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.timelineHeading {
+    position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 800;
+    font-size: 2.5em;
+    font-family: "Oxanium", sans-serif;
+}
+
+.timelineWrapper {
+    position: relative;
+    width: 60%;
+    max-width: 1200px;
+    padding: 2rem 0;
+}
+
+.timelineLine {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, 
+        rgba(104, 242, 12, 0.2) 0%,
+        rgba(255, 120, 36, 0.4) 25%,
+        rgba(138, 43, 226, 0.4) 50%,
+        rgba(255, 120, 36, 0.4) 75%,
+        rgba(104, 242, 12, 0.2) 100%
+    );
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.timelineLineGlow {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    background: linear-gradient(180deg, 
+        rgba(104, 242, 12, 0.1) 0%,
+        rgba(255, 120, 36, 0.2) 50%,
+        rgba(104, 242, 12, 0.1) 100%
+    );
+    transform: translateX(-50%);
+    filter: blur(8px);
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 5rem;
+    opacity: 0;
+    transform: translateX(-80px) scale(0.9);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.timelineItem.right {
+    transform: translateX(80px) scale(0.9);
+}
+
+.timelineItem.visible {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+.timelineContent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.timelineItem.left .timelineContent {
+    justify-content: flex-start;
+    padding-right: 52%;
+}
+
+.timelineItem.right .timelineContent {
+    justify-content: flex-end;
+    padding-left: 52%;
+    flex-direction: row-reverse;
+}
+
+.timelineIcon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(104, 242, 12, 0.2);
+    border: 4px solid #68f20c;
+    z-index: 3;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+}
+
+.timelineIcon.current {
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+.timelineIcon.current .pulseRing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    animation: pulseRing 2s ease-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(104, 242, 12, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(104, 242, 12, 0.8);
+    }
+}
+
+@keyframes pulseRing {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.timelineItem:hover .timelineIcon {
+    transform: translateX(-50%) scale(1.15) rotate(5deg);
+    box-shadow: 0 0 30px rgba(104, 242, 12, 0.6);
+}
+
+.timelineCard {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(255, 120, 36, 0.15));
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 1.8rem;
+    width: 48%;
+    backdrop-filter: blur(15px);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.timelineCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.timelineCard:hover::before {
+    left: 100%;
+}
+
+.timelineCard.expanded {
+    border-color: rgba(104, 242, 12, 0.5);
+    box-shadow: 0 15px 40px rgba(104, 242, 12, 0.3);
+}
+
+.timelineItem:hover .timelineCard {
+    transform: translateY(-8px);
+    border-color: rgba(104, 242, 12, 0.6);
+    box-shadow: 0 15px 40px rgba(104, 242, 12, 0.25);
+}
+
+.timelineCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.timelineDateBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(104, 242, 12, 0.2);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-family: "Oxanium", sans-serif;
+    font-size: 0.85rem;
+    color: #68f20c;
+    font-weight: 600;
+    border: 1px solid rgba(104, 242, 12, 0.3);
+}
+
+.timelineDuration {
+    background: rgba(255, 120, 36, 0.2);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-family: "Oxanium", sans-serif;
+    font-size: 0.85rem;
+    color: rgb(255, 120, 36);
+    font-weight: 600;
+    border: 1px solid rgba(255, 120, 36, 0.3);
+}
+
+.timelineTitle {
+    font-family: "Oxanium", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+    line-height: 1.3;
+    background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.8));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.timelineCompany {
+    font-family: "Oxanium", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: rgb(255, 120, 36);
+}
+
+.timelineLocation {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Oxanium", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+}
+
+.timelineDescription {
+    font-family: "Oxanium", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, margin-bottom 0.5s ease;
+}
+
+.timelineDescription.show {
+    max-height: 500px;
+    margin-bottom: 1rem;
+}
+
+.timelineTechStacks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, margin-top 0.5s ease;
+}
+
+.timelineTechStacks.show {
+    max-height: 200px;
+    margin-top: 1rem;
+}
+
+.techTag {
+    background: linear-gradient(135deg, blueviolet, rgba(138, 43, 226, 0.8));
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    box-shadow: 0 2px 8px rgba(138, 43, 226, 0.2);
+}
+
+.techTag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.9), blueviolet);
+}
+
+.expandIndicator {
+    margin-top: 1rem;
+    font-family: "Oxanium", sans-serif;
+    font-size: 0.85rem;
+    color: rgba(104, 242, 12, 0.8);
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.expandIndicator:hover {
+    background: rgba(104, 242, 12, 0.1);
+    color: #68f20c;
+}
+
+.timelineItem.work .timelineCard {
+    border-left: 4px solid rgb(255, 120, 36);
+}
+
+.timelineItem.education .timelineCard {
+    border-left: 4px solid #68f20c;
+}
+
+.timelineItem.right.work .timelineCard {
+    border-left: none;
+    border-right: 4px solid rgb(255, 120, 36);
+}
+
+.timelineItem.right.education .timelineCard {
+    border-left: none;
+    border-right: 4px solid #68f20c;
+}
+
+@media screen and (max-width: 1000px) {
+    .timelineWrapper {
+        width: 86%;
+    }
+    
+    .timelineLine {
+        left: 40px;
+    }
+    
+    .timelineLineGlow {
+        left: 40px;
+    }
+    
+    .timelineItem.left .timelineContent,
+    .timelineItem.right .timelineContent {
+        padding-left: 100px;
+        padding-right: 0;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+    
+    .timelineIcon {
+        left: 40px;
+        transform: translateX(-50%);
+    }
+    
+    .timelineItem:hover .timelineIcon {
+        transform: translateX(-50%) scale(1.1);
+    }
+    
+    .timelineCard {
+        width: 100%;
+    }
+    
+    .timelineHeading {
+        width: 90%;
+        justify-content: flex-start;
+    }
+    
+    .timelineItem.work .timelineCard,
+    .timelineItem.education .timelineCard {
+        border-left: 4px solid;
+        border-right: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timelineWrapper {
+        width: 90%;
+    }
+    
+    .timelineCard {
+        padding: 1.2rem;
+    }
+    
+    .timelineTitle {
+        font-size: 1.2rem;
+    }
+    
+    .timelineCompany {
+        font-size: 1rem;
+    }
+    
+    .timelineDescription {
+        font-size: 0.9rem;
+    }
+    
+    .timelineIcon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .timelineIcon svg {
+        width: 20px;
+        height: 20px;
+    }
+}

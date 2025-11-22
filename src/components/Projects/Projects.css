@@ -54,7 +54,7 @@
     display: flex;
     justify-content: space-between;
     background: rgba(0,0,0,0.8);
-    backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(10px);
     opacity: 1;
 }
 .projImg{
@@ -146,9 +146,28 @@
     }
     .projHeading{
         justify-content: flex-start;
-        width:90%;
+        width:86%;
     }
     .projectContainer{
         padding-top: 5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .allProjects {
+        width: 90%;
+    }
+    .projHeading{
+        width: 90%;
+        font-size: 2em;
+    }
+    .projCard{
+        margin-bottom: 1rem;
+    }
+    .githubButton{
+        font-size: 1.2rem;
+    }
+    .detailProj{
+        font-size: 0.9rem;
     }
 }

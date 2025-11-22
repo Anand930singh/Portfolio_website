@@ -164,6 +164,43 @@
 .socialMediaMobile div:not(:first-child):hover a svg {
     transform: scale(1.1);
 }
+@media screen and (max-width: 1000px) {
+    .sideLine{
+        right: 1rem;
+    }
+    .socialMedia{
+        left: 1rem;
+    }
+    .github{
+        width: 86%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sideLine{
+        display: none;
+    }
+    .socialMedia{
+        display: none;
+    }
+    .socialMediaMobile{
+        display: flex;
+        font-family: "Oxanium", sans-serif;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        color: white;
+        margin: 1rem;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(246, 246, 246, 0.2);
+    }
+    .github{
+        width: 90%;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .landingPageContain{
         row-gap: 3rem;
@@ -184,6 +221,15 @@
         margin: 1rem;
         align-items: center;
         box-shadow: 0 4px 8px rgba(246, 246, 246, 0.2);
+    }
+    .github{
+        width: 95%;
+        flex-direction: column;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+    }
+    .github img{
+        width: 100%;
     }
 }
 .githubContainer{

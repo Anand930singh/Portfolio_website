@@ -70,6 +70,15 @@
     font-family: "Oxanium", sans-serif;
     font-size:1em;
 }
+@media screen and (max-width: 1000px) {
+    .eduCard{
+        width: 86%;
+    }
+    .eduHeading{
+        width: 86%;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .eduCard{
         position: relative;
@@ -78,8 +87,18 @@
     }
     .eduHeading{
         width: 90%;
+        font-size: 2em;
     }
     .educationContainer{
         padding-top: 5rem;
+    }
+    .headingEdu{
+        font-size: 1.2em;
+    }
+    .durationEdu{
+        font-size: 0.9em;
+    }
+    .detailEdu{
+        font-size: 0.9em;
     }
 }

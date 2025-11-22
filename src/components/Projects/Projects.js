@@ -59,21 +59,21 @@ function Projects() {
             </div>
             <div className='projDetail'>
               <div className='projCount'>{String(project.id).padStart(2, '0')}</div>
-              <div className='githubDetail'>
-                <div className='githubButton'>
+                <div className='githubDetail'>
+                    <div className='githubButton'>
                   <a href={project.githubUrl}>GitHub</a>
-                </div>
-                <div className='detailProj'>
+                    </div>
+                    <div className='detailProj'>
                   {project.description}
-                </div>
-                <div className='techStacks'>
+                    </div>
+                    <div className='techStacks'>
                   {project.techStacks.map((tech, index) => (
                     <span key={index}>{tech}</span>
                   ))}
+                        </div>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
         ))}
       </div>
     </div>

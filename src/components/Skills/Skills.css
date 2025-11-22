@@ -27,12 +27,6 @@
 .skillIcons{
     background-color: transparent;
 }
-@media screen and (max-width: 854px) {
-    .allSkills{
-        column-count: 1;
-    }
-}
-
 .skillCard{
     position: relative;
     width:100%;
@@ -50,18 +44,42 @@
     box-shadow: 0 4px 8px rgba(120, 120, 120, 0.2);
     transform: translateY(-5px);
 }
-@media screen and (max-width: 593px) {
+
+@media screen and (max-width: 1000px) {
+    .allSkills{
+        width: 86%;
+    }
+    .skillHeading{
+        width: 86%;
+    }
+}
+
+@media screen and (max-width: 854px) {
+    .allSkills{
+        column-count: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .skillHeading{
         width:90%;
+        font-size: 2em;
     }
     .allSkills{
         width:90%;
     }
     .skillCard{
         padding-right: 0rem;
+        padding: 0.8rem;
     }
     .skillsContainer{
         padding-top:5rem;
+    }
+    .skillHead{
+        font-size: 1.3em;
+    }
+    .skillDetail{
+        font-size: 1em;
     }
 }
 .skillHeadDetail{
@@ -84,4 +102,30 @@
     font-weight:500;
     font-size: 1.1em;
     background-color: transparent;
+}
+
+.skillCard {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.skillCard.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.typing-cursor {
+    color: rgb(255, 120, 36);
+    animation: blink 1s infinite;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
 }

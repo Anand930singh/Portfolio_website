@@ -10,6 +10,8 @@ import Education from '../components/Education/Education';
 import Experience from '../components/Experience/Experience';
 import Projects from '../components/Projects/Projects';
 import Skills from '../components/Skills/Skills';
+import Statistics from '../components/Statistics/Statistics';
+import LeetCode from '../components/LeetCode/LeetCode';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
@@ -19,6 +21,8 @@ function LandingPage() {
   const aboutRef = useRef();
   const educationRef = useRef();
   const experienceRef = useRef();
+  const statisticsRef = useRef();
+  const leetcodeRef = useRef();
   const projectsRef = useRef();
   const skillsRef = useRef();
 
@@ -45,6 +49,12 @@ function LandingPage() {
     if (experienceRef.current) {
       observer.observe(experienceRef.current);
     }
+    if (statisticsRef.current) {
+      observer.observe(statisticsRef.current);
+    }
+    if (leetcodeRef.current) {
+      observer.observe(leetcodeRef.current);
+    }
     if (projectsRef.current) {
       observer.observe(projectsRef.current);
     }
@@ -62,6 +72,12 @@ function LandingPage() {
       if (experienceRef.current) {
         observer.unobserve(experienceRef.current);
       }
+      if (statisticsRef.current) {
+        observer.unobserve(statisticsRef.current);
+      }
+      if (leetcodeRef.current) {
+        observer.unobserve(leetcodeRef.current);
+      }
       if (projectsRef.current) {
         observer.unobserve(projectsRef.current);
       }
@@ -77,6 +93,8 @@ function LandingPage() {
         <div className={`defDiv ${activeSection === 'About' ? 'active' : ''}`}></div>
         <div className={`defDiv ${activeSection === 'Education' ? 'active' : ''}`}></div>
         <div className={`defDiv ${activeSection === 'Experience' ? 'active' : ''}`}></div>
+        <div className={`defDiv ${activeSection === 'Statistics' ? 'active' : ''}`}></div>
+        <div className={`defDiv ${activeSection === 'LeetCode' ? 'active' : ''}`}></div>
         <div className={`defDiv ${activeSection === 'Projects' ? 'active' : ''}`}></div>
         <div className={`defDiv ${activeSection === 'Skills' ? 'active' : ''}`}></div>
       </div>
@@ -91,6 +109,8 @@ function LandingPage() {
       <div id='About' ref={aboutRef}><About /></div>
       <div id='Education' ref={educationRef}><Education /></div>
       <div id='Experience' ref={experienceRef}><Experience /></div>
+      <div id='Statistics' ref={statisticsRef}><Statistics /></div>
+      <div id='LeetCode' ref={leetcodeRef}><LeetCode /></div>
       <div id='Projects' ref={projectsRef}><Projects /></div>
       <div id='Skills' ref={skillsRef}><Skills /></div>
       <div><Analytics style={{color:'white'}}/>

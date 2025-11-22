@@ -12,10 +12,10 @@ function Education() {
           <div className='eduLine'></div>
         </div>
         <div className='eduContent'>
-          <div className='durationEdu'>2021 - Present</div>
+          <div className='durationEdu'>2021 - 2025</div>
           <div className='headingEdu'>BACHELOR DEGREE - <span className='instituteName'>Indian Institute of Information Technology Dharwad</span></div>
           <div className='detailEdu'>
-            I am currently pursuing a Bachelor's degree in Computer Science, where I have gained a robust understanding of core computer science concepts like algorithms, data structures, and computer architecture. Through hands-on experience and project work, I have honed my programming skills in languages such as C, C++, and Python. These academic endeavors have equipped me with the competencies needed to excel in the realm of computer science.</div>
+            I completed my Bachelor's degree in Computer Science in 2025, where I gained a robust understanding of core computer science concepts like algorithms, data structures, and computer architecture. Through hands-on experience and project work, I honed my programming skills in languages such as C, C++, and Python. These academic endeavors have equipped me with the competencies needed to excel in the realm of computer science.</div>
         </div>
       </div>
       <div className='eduCard'>

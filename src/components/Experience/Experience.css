@@ -81,10 +81,34 @@
     }
     .expHeading{
         justify-content: flex-start;
-        width:90%;
+        width:87%;
     }
     .experienceContainer{
         padding-top: 5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .expCard{
+        width:90%;
+    }
+    .expHeading{
+        width: 90%;
+        font-size: 2em;
+    }
+    .expHeadingCard{
+        font-size: 1.2em;
+        padding: 0.5rem;
+    }
+    .expDetailCard{
+        padding: 0.5rem 1rem;
+    }
+    .expDetail{
+        font-size: 1em;
+    }
+    .expDetailRight{
+        width: 10rem;
+        height: 10rem;
     }
 }
 .expDetailLeft{

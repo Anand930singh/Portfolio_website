@@ -76,7 +76,7 @@ function Experience() {
             <div className='expHeading'><div>PROFESSIONAL EXPERIENCE</div></div>
             {experienceData.map((exp) => (
                 <div key={exp.id} className='expCard'>
-                    <div className='expHeadingCard'>
+                <div className='expHeadingCard'>
                         <div className='companyName'>{exp.companyName}</div>
                         <div className='timeDuration'>{exp.timeDuration}</div>
                         <div className='openCloseIcon'>
@@ -89,23 +89,23 @@ function Experience() {
                     </div>
                     {active && ind === exp.id && (
                         <div className='expDetailCard'>
-                            <div className='expDetailLeft'>
+                    <div className='expDetailLeft'>
                                 <div className='expLocation'>{exp.location}</div>
                                 <div className='expDetail'>{exp.description}</div>
-                                <div className='techStacks'>
+                        <div className='techStacks'>
                                     {exp.techStacks.map((tech, index) => (
                                         <span key={index}>{tech}</span>
                                     ))}
-                                </div>
-                            </div>
+                        </div>
+                    </div>
                             {exp.image && (
-                                <div className='expDetailRight'>
+                    <div className='expDetailRight'>
                                     <img 
                                         src={exp.image.src} 
                                         alt='Not available' 
                                         height={exp.image.height || undefined}
                                     />
-                                </div>
+                    </div>
                             )}
                         </div>
                     )}
