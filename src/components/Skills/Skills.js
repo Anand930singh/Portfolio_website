@@ -30,30 +30,31 @@ function TypingText({ text, speed = 50 }) {
     );
 }
 
-function Skills() {
-    const skillsData = [
-        {
-            icon: FaRegFileCode,
-            head: 'Languages',
-            detail: 'C, C++, Rust, JavaScript, MySQL, HTML, CSS, JSON, Python'
-        },
-        {
-            icon: MdDeveloperMode,
-            head: 'Development',
-            detail: 'Docker, React, JSON, NodeJS, NestJS, ExpressJS, RestAPIs'
-        },
-        {
-            icon: PiBooksDuotone,
-            head: 'Relevant Courses',
-            detail: 'Data Structure, Software Engineering, Object oriented Programming, Computer Networks, Database Management System, Blockchain, System Design, Operating System'
-        },
-        {
-            icon: HiMiniServerStack,
-            head: 'Developer Tools',
-            detail: 'Git, Netlify, VS Code, Postman, Render, Vercel'
-        }
-    ];
+// Skills data outside component to avoid dependency issues
+const skillsData = [
+    {
+        icon: FaRegFileCode,
+        head: 'Languages',
+        detail: 'C, C++, Rust, JavaScript, MySQL, HTML, CSS, JSON, Python'
+    },
+    {
+        icon: MdDeveloperMode,
+        head: 'Development',
+        detail: 'Docker, React, JSON, NodeJS, NestJS, ExpressJS, RestAPIs'
+    },
+    {
+        icon: PiBooksDuotone,
+        head: 'Relevant Courses',
+        detail: 'Data Structure, Software Engineering, Object oriented Programming, Computer Networks, Database Management System, Blockchain, System Design, Operating System'
+    },
+    {
+        icon: HiMiniServerStack,
+        head: 'Developer Tools',
+        detail: 'Git, Netlify, VS Code, Postman, Render, Vercel'
+    }
+];
 
+function Skills() {
     const [visibleSkills, setVisibleSkills] = useState([]);
 
     useEffect(() => {

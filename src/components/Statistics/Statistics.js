@@ -12,7 +12,6 @@ function Statistics() {
     contributions: 0,
     technologies: 0
   });
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Fetch real GitHub stats
@@ -65,13 +64,10 @@ function Statistics() {
           window.requestAnimationFrame(step);
         };
 
-        animateValue(0, realStats.commits, 2000, (value) => setStats(prev => ({ ...prev, commits: value })));
-        animateValue(0, realStats.repositories, 2000, (value) => setStats(prev => ({ ...prev, repositories: value })));
-        animateValue(0, realStats.contributions, 2000, (value) => setStats(prev => ({ ...prev, contributions: value })));
-        animateValue(0, realStats.technologies, 2000, (value) => {
-          setStats(prev => ({ ...prev, technologies: value }));
-          setLoading(false);
-        });
+          animateValue(0, realStats.commits, 2000, (value) => setStats(prev => ({ ...prev, commits: value })));
+          animateValue(0, realStats.repositories, 2000, (value) => setStats(prev => ({ ...prev, repositories: value })));
+          animateValue(0, realStats.contributions, 2000, (value) => setStats(prev => ({ ...prev, contributions: value })));
+          animateValue(0, realStats.technologies, 2000, (value) => setStats(prev => ({ ...prev, technologies: value })));
       } catch (error) {
         console.error('Error fetching GitHub stats:', error);
         // Fallback to approximate values if API fails
@@ -98,10 +94,7 @@ function Statistics() {
         animateValue(0, fallbackStats.commits, 2000, (value) => setStats(prev => ({ ...prev, commits: value })));
         animateValue(0, fallbackStats.repositories, 2000, (value) => setStats(prev => ({ ...prev, repositories: value })));
         animateValue(0, fallbackStats.contributions, 2000, (value) => setStats(prev => ({ ...prev, contributions: value })));
-        animateValue(0, fallbackStats.technologies, 2000, (value) => {
-          setStats(prev => ({ ...prev, technologies: value }));
-          setLoading(false);
-        });
+        animateValue(0, fallbackStats.technologies, 2000, (value) => setStats(prev => ({ ...prev, technologies: value })));
       }
     };
 

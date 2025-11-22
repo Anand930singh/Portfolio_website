@@ -40,49 +40,58 @@ function LandingPage() {
       }
     );
 
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
+    // Store refs in variables to avoid cleanup warnings
+    const aboutElement = aboutRef.current;
+    const educationElement = educationRef.current;
+    const experienceElement = experienceRef.current;
+    const statisticsElement = statisticsRef.current;
+    const leetcodeElement = leetcodeRef.current;
+    const projectsElement = projectsRef.current;
+    const skillsElement = skillsRef.current;
+
+    if (aboutElement) {
+      observer.observe(aboutElement);
     }
-    if (educationRef.current) {
-      observer.observe(educationRef.current);
+    if (educationElement) {
+      observer.observe(educationElement);
     }
-    if (experienceRef.current) {
-      observer.observe(experienceRef.current);
+    if (experienceElement) {
+      observer.observe(experienceElement);
     }
-    if (statisticsRef.current) {
-      observer.observe(statisticsRef.current);
+    if (statisticsElement) {
+      observer.observe(statisticsElement);
     }
-    if (leetcodeRef.current) {
-      observer.observe(leetcodeRef.current);
+    if (leetcodeElement) {
+      observer.observe(leetcodeElement);
     }
-    if (projectsRef.current) {
-      observer.observe(projectsRef.current);
+    if (projectsElement) {
+      observer.observe(projectsElement);
     }
-    if (skillsRef.current) {
-      observer.observe(skillsRef.current);
+    if (skillsElement) {
+      observer.observe(skillsElement);
     }
 
     return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
+      if (aboutElement) {
+        observer.unobserve(aboutElement);
       }
-      if (educationRef.current) {
-        observer.unobserve(educationRef.current);
+      if (educationElement) {
+        observer.unobserve(educationElement);
       }
-      if (experienceRef.current) {
-        observer.unobserve(experienceRef.current);
+      if (experienceElement) {
+        observer.unobserve(experienceElement);
       }
-      if (statisticsRef.current) {
-        observer.unobserve(statisticsRef.current);
+      if (statisticsElement) {
+        observer.unobserve(statisticsElement);
       }
-      if (leetcodeRef.current) {
-        observer.unobserve(leetcodeRef.current);
+      if (leetcodeElement) {
+        observer.unobserve(leetcodeElement);
       }
-      if (projectsRef.current) {
-        observer.unobserve(projectsRef.current);
+      if (projectsElement) {
+        observer.unobserve(projectsElement);
       }
-      if (skillsRef.current) {
-        observer.unobserve(skillsRef.current);
+      if (skillsElement) {
+        observer.unobserve(skillsElement);
       }
     };
   }, []);
