@@ -44,18 +44,17 @@
     position:fixed;
     height:40%;
     width:2px;
-    background:  white;
+    background: linear-gradient(180deg, rgba(0,36,14,0.1888357637977066) 5%, rgba(116,116,116,1) 14%, rgba(135,135,135,1) 80%, rgba(115,114,114,0.3456985088957458) 95%);
     border-image-slice: 1;
     top:55%;
     transform: translateY(-50%);
     left:2.5rem;
     display: flex;
     flex-direction: column;
-    justify-content:end;
+    justify-content:flex-end;
     align-items: center;
     row-gap: 1.7rem;
     z-index: 10;
-
 }
 
 .socialMedia div:not(:first-child) {
@@ -63,25 +62,107 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    height: 2.2rem;
-    width: 2.2rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
 }
-.socialMedia div:not(:first-child):hover{
-    border-color: blue;
+
+.socialMedia div:not(:first-child):hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.socialMedia div:not(:first-child) a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.socialMedia div:not(:first-child) a:hover {
+    color: #68f20c;
+}
+
+.socialMedia div:not(:first-child) a svg {
+    transition: all 0.3s ease;
+}
+
+.socialMedia div:not(:first-child):hover a svg {
+    transform: scale(1.1);
 }
 
 .followMe{
-    transform: rotate('90deg');
+    transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     color: white;
     padding-bottom: 5px;
-    width:5rem;
+    width: 5rem;
     position: relative;
     background-color: transparent;
-    top:-5rem;
+    top: -5rem;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 .socialMediaMobile{
     display: none;
+}
+
+.followMeMobile{
+    font-family: "Oxanium", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.socialMediaMobile div:not(:first-child) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.socialMediaMobile div:not(:first-child):hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.socialMediaMobile div:not(:first-child) a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.socialMediaMobile div:not(:first-child) a:hover {
+    color: #68f20c;
+}
+
+.socialMediaMobile div:not(:first-child) a svg {
+    transition: all 0.3s ease;
+}
+
+.socialMediaMobile div:not(:first-child):hover a svg {
+    transform: scale(1.1);
 }
 @media screen and (max-width: 600px) {
     .landingPageContain{

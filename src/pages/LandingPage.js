@@ -91,12 +91,6 @@ function LandingPage() {
       <div id='About' ref={aboutRef}><About /></div>
       <div id='Education' ref={educationRef}><Education /></div>
       <div id='Experience' ref={experienceRef}><Experience /></div>
-      <div className='githubContainer'>
-        <div className='github'>
-          <img src="https://stats.quine.sh/Anand930singh/github?theme=dark)](https://quine.sh?utm_source=widgets&utm_campaign=Anand930singh" />
-          <img src="https://stats.quine.sh/Anand930singh/dependencies?theme=dark)](https://quine.sh?utm_source=widgets&utm_campaign=Anand930singh" />
-        </div>
-      </div>
       <div id='Projects' ref={projectsRef}><Projects /></div>
       <div id='Skills' ref={skillsRef}><Skills /></div>
       <div><Analytics style={{color:'white'}}/>

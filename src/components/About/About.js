@@ -14,7 +14,7 @@ function About() {
             typewriter.typeString("Anand Kumar Singh").pauseFor(1000).start();
           }}
         /></span></span><br />
-        <span className='passion'> a dynamic and ambitious third-year B.Tech student majoring in Computer Science at the esteemed Indian Institute of Information Technology, Dharwad. Passionate about technology and driven by a desire to innovate, I'm on a mission to craft cutting-edge solutions that leave a lasting impact on the world.</span>
+        <span className='passion'> an Associate Software Developer at 314e Corporation, specializing in healthcare data integration and transformation. I hold a B.Tech degree in Computer Science from the Indian Institute of Information Technology, Dharwad. Passionate about technology and driven by innovation, I'm dedicated to building scalable solutions that make a meaningful impact.</span>
         <div>
         <a href="https://drive.usercontent.google.com/u/0/uc?id=1xELk6kIa9TwlUN2gSohfckifQG-xdBAq&export=download" download>
           <div className="buttonBox" data-tooltip="Size: 157 KB">
