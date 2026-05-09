@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import MyImg from '../../asets/myImg.png'
+import MyImg from '../../assets/myImg.png'
 import Typewriter from 'typewriter-effect';
 
 function About() {
